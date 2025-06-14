@@ -1,0 +1,8 @@
+{
+    "name": "football-demo/website",
+    "description": "高校アメフト部デモサイト",
+    "require": {
+        "php": ">=7.4"
+    }
+}
+EOF < /dev/null

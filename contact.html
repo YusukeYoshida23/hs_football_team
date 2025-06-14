@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 桜ヶ丘高校アメリカンフットボール部</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-football-ball"></i> 桜ヶ丘高校アメフト部</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="members.html">メンバー紹介</a></li>
+                    <li><a href="schedule.html">スケジュール</a></li>
+                    <li><a href="contact.html" class="active">お問い合わせ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>お問い合わせ</h1>
+                <p>入部希望や見学についてお気軽にお問い合わせください</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>電話でのお問い合わせ</h3>
+                        <p>03-1234-5678</p>
+                        <p class="time">平日 9:00-17:00</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>メールでのお問い合わせ</h3>
+                        <p>football@sakuragaoka-hs.ac.jp</p>
+                        <p class="time">24時間受付</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>直接お越しの場合</h3>
+                        <p>〒123-4567<br>東京都○○区○○1-2-3</p>
+                        <p class="time">練習時間に合わせてお越しください</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <h2>お問い合わせフォーム</h2>
+                <div class="form-container">
+                    <form id="contactForm" action="php/contact-demo.php" method="POST">
+                        <div class="form-group">
+                            <label for="inquiryType">お問い合わせ種別 <span class="required">*</span></label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">選択してください</option>
+                                <option value="入部希望">入部希望</option>
+                                <option value="見学希望">見学希望</option>
+                                <option value="体験参加希望">体験参加希望</option>
+                                <option value="保護者からの質問">保護者からの質問</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastName">姓 <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">名 <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastNameKana">セイ <span class="required">*</span></label>
+                                <input type="text" id="lastNameKana" name="lastNameKana" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstNameKana">メイ <span class="required">*</span></label>
+                                <input type="text" id="firstNameKana" name="firstNameKana" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="grade">学年</label>
+                            <select id="grade" name="grade">
+                                <option value="">選択してください</option>
+                                <option value="中学1年生">中学1年生</option>
+                                <option value="中学2年生">中学2年生</option>
+                                <option value="中学3年生">中学3年生</option>
+                                <option value="高校1年生">高校1年生</option>
+                                <option value="高校2年生">高校2年生</option>
+                                <option value="高校3年生">高校3年生</option>
+                                <option value="保護者">保護者</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">アメフト経験</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="experience" value="未経験">
+                                    <span>未経験</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="experience" value="少し経験あり">
+                                    <span>少し経験あり</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="experience" value="経験豊富">
+                                    <span>経験豊富</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitDate">希望見学日</label>
+                            <input type="date" id="visitDate" name="visitDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="具体的なご質問やご要望をお書きください"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                <a href="#privacy-policy" class="privacy-link">プライバシーポリシー</a>に同意します <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit-info">
+            <div class="container">
+                <h2>見学・体験について</h2>
+                <div class="visit-grid">
+                    <div class="visit-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>見学について</h3>
+                        <ul>
+                            <li>練習見学は随時受け付けています</li>
+                            <li>事前にご連絡いただけるとスムーズです</li>
+                            <li>保護者の方もご一緒にどうぞ</li>
+                            <li>運動できる服装でお越しください</li>
+                        </ul>
+                    </div>
+
+                    <div class="visit-card">
+                        <i class="fas fa-running"></i>
+                        <h3>体験参加について</h3>
+                        <ul>
+                            <li>基礎練習から体験可能です</li>
+                            <li>未経験者も大歓迎です</li>
+                            <li>必要な用具はお貸しします</li>
+                            <li>怪我防止のため準備運動をしっかり行います</li>
+                        </ul>
+                    </div>
+
+                    <div class="visit-card">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>入部手続きについて</h3>
+                        <ul>
+                            <li>入部届の提出が必要です</li>
+                            <li>保護者の同意書が必要です</li>
+                            <li>スポーツ保険への加入をお願いします</li>
+                            <li>詳細は顧問までお問い合わせください</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy-policy" class="privacy-policy">
+            <div class="container">
+                <h2>プライバシーポリシー</h2>
+                <div class="policy-content">
+                    <h3>個人情報の取り扱いについて</h3>
+                    <p>桜ヶ丘高校アメリカンフットボール部では、お問い合わせいただいた個人情報を以下の目的で利用いたします。</p>
+                    
+                    <h4>利用目的</h4>
+                    <ul>
+                        <li>お問い合わせへの回答</li>
+                        <li>見学・体験に関する連絡</li>
+                        <li>部活動に関する情報提供</li>
+                    </ul>
+
+                    <h4>個人情報の管理</h4>
+                    <ul>
+                        <li>お預かりした個人情報は適切に管理し、第三者に提供することはありません</li>
+                        <li>利用目的達成後は適切に廃棄いたします</li>
+                        <li>個人情報に関するお問い合わせは下記までご連絡ください</li>
+                    </ul>
+
+                    <p class="contact-privacy">
+                        <strong>個人情報に関するお問い合わせ先：</strong><br>
+                        桜ヶ丘高校アメリカンフットボール部<br>
+                        TEL: 03-1234-5678<br>
+                        Email: football@sakuragaoka-hs.ac.jp
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>桜ヶ丘高校アメリカンフットボール部</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 〒123-4567 東京都○○区○○1-2-3</p>
+                    <p><i class="fas fa-phone"></i> TEL: 03-1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> football@sakuragaoka-hs.ac.jp</p>
+                </div>
+                <div class="footer-links">
+                    <h4>リンク</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="members.html">メンバー紹介</a></li>
+                        <li><a href="schedule.html">スケジュール</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 桜ヶ丘高校アメリカンフットボール部. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle"></i>
+                <h3>送信完了</h3>
+                <p>お問い合わせありがとうございます。<br>確認メールをお送りいたしました。<br>2-3営業日以内にご返答いたします。</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

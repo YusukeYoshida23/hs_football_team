@@ -1,0 +1,1129 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー・ナビゲーション */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i {
+    color: #ffd700;
+    margin-right: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: rgba(255,255,255,0.1);
+    color: #ffd700;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* メインコンテンツ */
+main {
+    margin-top: 80px;
+}
+
+/* ヒーローセクション */
+.hero {
+    background: linear-gradient(rgba(30,60,114,0.8), rgba(42,82,152,0.8)), url('https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3') center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ボタンスタイル */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #ffd700;
+    color: #1e3c72;
+}
+
+.btn-primary:hover {
+    background: #ffed4a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #1e3c72;
+}
+
+/* セクション共通スタイル */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e3c72;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ffd700;
+}
+
+/* Aboutセクション */
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-text li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-text li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+/* ニュースセクション */
+.news {
+    background: #f8f9fa;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-item h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+/* CTAセクション */
+.cta {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta h2::after {
+    background: #ffd700;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ページヘッダー */
+.page-header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 6rem 0 4rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* コーチセクション */
+.coaches {
+    background: white;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.coach-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.coach-image {
+    margin-bottom: 1.5rem;
+}
+
+.coach-image i {
+    font-size: 4rem;
+    color: #1e3c72;
+    background: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.coach-info h3 {
+    font-size: 1.5rem;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.position {
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.experience {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.message {
+    line-height: 1.6;
+}
+
+/* 選手セクション */
+.players {
+    background: #f8f9fa;
+}
+
+.grade-section {
+    margin-bottom: 3rem;
+}
+
+.grade-section h3 {
+    font-size: 1.8rem;
+    color: #1e3c72;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ffd700;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.player-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.player-image i {
+    font-size: 3rem;
+    color: #1e3c72;
+    background: #f8f9fa;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.player-info h4 {
+    font-size: 1.2rem;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.position {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin: 0.5rem 0;
+}
+
+.stats {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.comment {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* チームメッセージ */
+.team-message {
+    background: white;
+    text-align: center;
+}
+
+.message-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* スケジュールページ */
+.practice-schedule {
+    background: white;
+}
+
+.schedule-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.schedule-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.schedule-card:hover {
+    border-color: #ffd700;
+    transform: translateY(-5px);
+}
+
+.schedule-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.schedule-card i {
+    color: #ffd700;
+    margin-right: 0.5rem;
+}
+
+.time-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* イベントタイムライン */
+.upcoming-events {
+    background: #f8f9fa;
+}
+
+.events-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-item {
+    display: flex;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.event-date {
+    background: #1e3c72;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.event-content h3 {
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.event-type {
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.event-content .location,
+.event-content .time {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.event-content i {
+    margin-right: 0.5rem;
+}
+
+.description {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* 年間スケジュール */
+.annual-schedule {
+    background: white;
+}
+
+.season-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.season {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #ffd700;
+}
+
+.season h3 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.season i {
+    color: #ffd700;
+    margin-right: 0.5rem;
+}
+
+.season ul {
+    list-style: none;
+}
+
+.season li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.season li::before {
+    content: '•';
+    color: #1e3c72;
+    position: absolute;
+    left: 0;
+}
+
+.season li:last-child {
+    border-bottom: none;
+}
+
+/* 重要なお知らせ */
+.important-notes {
+    background: #f8f9fa;
+}
+
+.notes-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.note-item {
+    display: flex;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.note-item i {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.note-item h3 {
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+/* お問い合わせページ */
+.contact-info {
+    background: white;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin-bottom: 0.5rem;
+}
+
+.time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* お問い合わせフォーム */
+.contact-form-section {
+    background: #f8f9fa;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #1e3c72;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.checkbox-group {
+    margin: 2rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.privacy-link {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit .btn {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+/* 見学・体験情報 */
+.visit-info {
+    background: white;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.visit-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border-top: 4px solid #ffd700;
+}
+
+.visit-card i {
+    font-size: 3rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.visit-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+}
+
+.visit-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.visit-card li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.visit-card li::before {
+    content: '✓';
+    color: #ffd700;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* プライバシーポリシー */
+.privacy-policy {
+    background: #f8f9fa;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.policy-content h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.policy-content h4 {
+    color: #1e3c72;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.policy-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.contact-privacy {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-body i {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.modal-body h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+/* フッター */
+footer {
+    background: #1e3c72;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-info h3 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-info i {
+    color: #ffd700;
+    margin-right: 0.5rem;
+}
+
+.footer-links h4 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.8;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: #1e3c72;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .stat-item {
+        flex: 1;
+        margin: 0 0.5rem;
+    }
+    
+    .coaches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .event-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .event-date {
+        align-self: center;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .season-schedule {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        margin: 0 0 1rem 0;
+    }
+    
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coaches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+    }
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ホバーエフェクト */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}

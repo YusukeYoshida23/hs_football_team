@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ローカルサーバー起動方法 - 桜ヶ丘高校アメフト部</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #1e3c72;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        .step {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 1rem 0.5rem 1rem 0;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2a5298;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏈 ローカルサーバー起動方法</h1>
+        
+        <div class="warning">
+            <strong>⚠️ 重要:</strong> お問い合わせフォームをテストするには、PHPが動作するローカルサーバーが必要です。
+        </div>
+
+        <h2>🚀 簡単な起動方法</h2>
+        
+        <div class="step">
+            <h3>方法1: PHPの内蔵サーバーを使用（推奨）</h3>
+            <ol>
+                <li>ターミナル（コマンドプロンプト）を開く</li>
+                <li>プロジェクトフォルダに移動:</li>
+            </ol>
+            <div class="code">cd /Users/yusukeyoshida/coding/claude/football-team</div>
+            <ol start="3">
+                <li>PHPサーバーを起動:</li>
+            </ol>
+            <div class="code">php -S localhost:8000</div>
+            <ol start="4">
+                <li>ブラウザで以下にアクセス:</li>
+            </ol>
+            <div class="code">http://localhost:8000</div>
+        </div>
+
+        <div class="step">
+            <h3>方法2: Python 3を使用</h3>
+            <ol>
+                <li>ターミナルでプロジェクトフォルダに移動</li>
+                <li>Pythonサーバーを起動:</li>
+            </ol>
+            <div class="code">python3 -m http.server 8000</div>
+            <div class="warning">
+                <strong>注意:</strong> Pythonサーバーの場合、PHPが動作しないため、お問い合わせフォームは「Failed to fetch」エラーになります。
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>方法3: Node.js (live-server)を使用</h3>
+            <ol>
+                <li>Node.jsとnpmがインストール済みの場合:</li>
+            </ol>
+            <div class="code">npx live-server --port=8000</div>
+        </div>
+
+        <h2>🔧 トラブルシューティング</h2>
+
+        <h3>エラー「Failed to fetch」が出る場合</h3>
+        <ul>
+            <li>PHPサーバーが起動していることを確認</li>
+            <li>ブラウザの開発者ツール（F12）でコンソールエラーを確認</li>
+            <li>ファイルパスが正しいか確認</li>
+        </ul>
+
+        <h3>PHPがインストールされていない場合</h3>
+        <ul>
+            <li><strong>Mac:</strong> Homebrewでインストール: <code>brew install php</code></li>
+            <li><strong>Windows:</strong> <a href="https://www.php.net/downloads.php">PHP公式サイト</a>からダウンロード</li>
+            <li><strong>Linux:</strong> パッケージマネージャーでインストール: <code>sudo apt install php</code></li>
+        </ul>
+
+        <h2>✅ 動作確認方法</h2>
+        
+        <div class="success">
+            <strong>正常に動作している場合:</strong>
+            <ol>
+                <li>ホームページが表示される</li>
+                <li>ナビゲーションメニューが動作する</li>
+                <li>お問い合わせフォームから送信できる</li>
+                <li>「送信完了（デモ版）」のモーダルが表示される</li>
+            </ol>
+        </div>
+
+        <h2>📁 現在の設定</h2>
+        <ul>
+            <li><strong>お問い合わせ先:</strong> <code>php/contact-demo.php</code> (デモ版)</li>
+            <li><strong>ログファイル:</strong> <code>php/demo_inquiries.json</code></li>
+            <li><strong>デバッグ:</strong> ブラウザのコンソールでログ確認可能</li>
+        </ul>
+
+        <div class="warning">
+            <strong>本番環境への移行時:</strong>
+            <br>contact.htmlの送信先を <code>php/contact.php</code> に変更し、メール設定を行ってください。
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="btn">ホームページを開く</a>
+            <a href="contact.html" class="btn">お問い合わせページを開く</a>
+        </div>
+    </div>
+</body>
+</html>

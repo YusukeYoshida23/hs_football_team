@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: football-demo
+    env: php
+    buildCommand: |
+      echo "Building PHP application..."
+    startCommand: |
+      php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: PHP_VERSION
+        value: "8.1"
