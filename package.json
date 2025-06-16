@@ -1,0 +1,11 @@
+{
+    "name": "football-demo",
+    "version": "1.0.0",
+    "description": "高校アメフト部デモサイト",
+    "scripts": {
+      "start": "php -S 0.0.0.0:$PORT"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    }
+  }
