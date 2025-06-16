@@ -1,11 +1,12 @@
 {
-    "name": "football-demo",
-    "version": "1.0.0",
-    "description": "高校アメフト部デモサイト",
-    "scripts": {
-      "start": "php -S 0.0.0.0:$PORT"
-    },
-    "engines": {
-      "node": ">=14.0.0"
-    }
+  "name": "football-demo",
+  "version": "1.0.0",
+  "description": "高校アメフト部デモサイト",
+  "scripts": {
+    "build": "echo 'No build needed'",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
   }
+}
